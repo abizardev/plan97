@@ -1,0 +1,615 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Plan Your Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Barlow:wght@400;500;600;700;800;900&amp;family=Figtree:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=guar1">
+  <link rel="stylesheet" href="css/bevel-sections.css?v=guar1">
+  <link rel="preload" href="assets/images/hero-bg-desktop.webp" as="image" media="(min-width: 769px)">
+  <link rel="preload" href="assets/images/hero-bg-mobile.webp" as="image" media="(max-width: 768px)">
+  <script src="assets/vendor/dodopayments-checkout.js"></script>
+  <style>
+                @media (max-width: 768px) {
+      .page-wrapper {
+        background: url('assets/images/hero-bg-mobile.webp') center top / 100% auto no-repeat, #fff6fa !important;
+        height: auto !important;
+        min-height: auto !important;
+        border-width: 8px !important;
+        border-radius: 20px !important;
+        padding-bottom: 16px !important;
+      }
+      .hero-container {
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 0 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .hero-left {
+        width: 100% !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      .hero-text-group {
+        /* Pushed down slightly so eyes naturally register the headline first */
+        margin-top: 15vh !important;
+        text-align: center !important;
+        padding: 0 10px !important;
+        background: transparent !important;
+      }
+      .hero-title {
+        font-family: 'Barlow', sans-serif !important;
+        font-size: clamp(25px, 7.2vw, 33px) !important;
+        line-height: 1.1 !important;
+        font-weight: 900 !important;
+        color: #de2b70 !important;
+        margin-bottom: 8px !important;
+        letter-spacing: -0.03em !important;
+        text-wrap: balance !important;
+      }
+      .hero-desc {
+        font-family: 'Inter', -apple-system, sans-serif !important;
+        font-size: 12.5px !important;
+        line-height: 1.5 !important;
+        color: #55555c !important;
+        font-weight: 450 !important;
+        max-width: 295px !important;
+        margin: 0 auto !important;
+        letter-spacing: -0.01em !important;
+      }
+      /* Spacer tuned so button sits higher directly under the planner with natural clearance */
+      .hero-planner-mobile-spacer {
+        display: block !important;
+        width: 100% !important;
+        height: 318px !important;
+        pointer-events: none !important;
+      }
+      .hero-cta-group {
+        width: 100% !important;
+        max-width: 310px !important;
+        margin-top: 6px !important;
+        margin-bottom: 12px !important;
+        z-index: 10 !important;
+      }
+      .hero-cta-group .btn-primary {
+        width: 100% !important;
+        padding: 14px 22px !important;
+        font-size: 0.98rem !important;
+        font-weight: 800 !important;
+        justify-content: space-between !important;
+        box-shadow: 0 10px 24px rgba(222, 43, 112, 0.3) !important;
+        touch-action: manipulation !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+      }
+      .transform-heading br {
+        display: none;
+      }
+      .s2-mobile-cta {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- S1 — HERO -->
+  <div class="page-wrapper">
+    <div class="page-content">
+      <header class="header">
+        <div class="nav-tab nav-left">
+          <a href="#" class="contact-btn">
+            Explore
+            <span class="phone-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </span>
+          </a>
+        </div>
+        <div class="nav-tab nav-center">
+          <a href="#" class="logo">Plan Your Life.</a>
+        </div>
+        <div class="nav-tab nav-right">
+          <a href="#" class="contact-btn">
+            Shop Now
+            <span class="phone-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </span>
+          </a>
+        </div>
+      </header>
+
+      <main class="hero-container">
+        <section class="hero-left">
+          <div class="hero-text-group">
+            <h1 class="hero-title" style="font-size:clamp(2rem,3.5vw,2.6rem); line-height:1.12; letter-spacing:-0.03em; margin-bottom:14px;">Stop Client Drop-Off.<br>Build Daily Consistency.</h1>
+            <p class="hero-desc" style="max-width:540px; font-size:0.95rem; line-height:1.55; color:#2d2d30; font-weight:500; margin-bottom:24px;">Clients drop off when logging workouts feels like homework. Give them a physical daily planner they actually open, fill out, and stick with every week.</p>
+          </div>
+          <div class="hero-planner-mobile-spacer" style="display:none;"></div>
+          <div class="hero-cta-group" style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; align-items:center; gap:20px;">
+              <a href="#showcase-section" class="btn-primary" id="hero-cta-btn" style="padding:16px 28px; font-size:1.05rem;">
+                Get The Coach System
+                <span class="arrow-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </a>
+            </div>
+
+          </div>
+    </section></main></div>
+  
+      
+
+      <div class="bottom-arrow-tab" onclick="document.getElementById('s2').scrollIntoView({behavior:'smooth'})">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </div>
+    </div>
+  
+
+<section class="section-2 bv-scope bv-millions" id="s2">
+<div class="w-layout-blockcontainer container-2 w-container">
+<div class="u-vflex-stretch-top u-vgap-80-40">
+<div class="row row-center-horizontal">
+<div class="col col-lg-9 col-md-11 col-sm-12">
+<div class="u-vflex-center-top u-vgap-40 u-align-center">
+<h2 class="s2-title" style="max-width:850px; margin:0 auto; font-family: 'Barlow', var(--font-body), sans-serif; font-size:clamp(2rem, 3.5vw, 3.2rem); font-weight:800; line-height:1.15; letter-spacing:-0.03em; text-transform:none; color:#1a1a1a;">Trusted by Over 2,500+ Coaches Driving Real Transformations</h2>
+</div>
+</div>
+</div>
+
+<div class="marquee cc-accolades">
+<div class="marquee_row cc-accolades">
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/EwVIimI0Jd5H.avif" alt="Man in black workout clothes taking a mirror selfie in a gym, with fitness stats showing 74% Belastung, 60% Erholung, and 77% Schlaf at the top." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/Rlg1RIfIhBHE.avif" alt="Fitness app screenshot showing 2% strain, 74% recovery, 65% sleep with coaching message praising recovery and advising earlier sleep; user reflects on a stressful week returning to fitness." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/56pcTj0uLqGi.avif" alt="Cyclist holding a can of Coca-Cola, resting next to a black road bike at a gas station, with fitness app stats showing 133 km distance, 4:41:13 duration, and 96% strain." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/zGBadz8Q3udK.avif" alt="Collage of two breakfast plates with nutritional information overlays: oatmeal with bananas and blueberries showing 496 kcal, and two fried eggs with avocado slices showing 277 kcal along with recovery and sleep percentages." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/h1dfdEJXQQG3.avif" alt="Woman in black athletic outfit taking a mirror selfie in a gym with overlay of Garmin data showing strain, recovery, sleep, and strength training metrics including duration, calories burned, heart rate, and weight lifted." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/CPDgGVpXpWvj.avif" alt="Black Canyon racing bicycle parked on grass near a palm tree by a waterfront under a clear sky." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/TWmIRevxkEHX.avif" alt="Running app screenshot showing a 16.03 km outdoor run in Indore, Madhya Pradesh with active duration 1h 52m, pace 7:03/km, 1243 kcal burned, elevation 45 m, heart rate 152 bpm, and power 183 watt." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/6YK07ucjlBWY.avif" alt="Man in a gym performing a push exercise using cable machine, with workout stats overlay showing 66% strain, 95% recovery, 99% sleep, 25g fat, 204g carbs, 171g protein, 1 hour 29 minutes duration, and 517 kcal energy burned." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/tDLr9pjDis2O.avif" alt="Screenshot of a testimonial praising the Bevel Health app for managing health conditions, showing daily metrics of strain, recovery, sleep, stress and energy, plus personalized health advice about luteal phase recovery and managing POTS symptoms." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/YoRhDP7Ucfsb.avif" alt="Indoor paddle tennis court with a player holding a paddle, a blue floor, net divides the court, and a sneaker visible in the foreground, overlaid with fitness tracking stats for strain, recovery, and sleep percentages." class="marquee_image">
+</div>
+</div>
+<div class="marquee_row cc-accolades">
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/EwVIimI0Jd5H.avif" alt="Man in black workout clothes taking a mirror selfie in a gym, with fitness stats showing 74% Belastung, 60% Erholung, and 77% Schlaf at the top." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/Rlg1RIfIhBHE.avif" alt="Fitness app screenshot showing 2% strain, 74% recovery, 65% sleep with coaching message praising recovery and advising earlier sleep; user reflects on a stressful week returning to fitness." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/56pcTj0uLqGi.avif" alt="Cyclist holding a can of Coca-Cola, resting next to a black road bike at a gas station, with fitness app stats showing 133 km distance, 4:41:13 duration, and 96% strain." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/zGBadz8Q3udK.avif" alt="Collage of two breakfast plates with nutritional information overlays: oatmeal with bananas and blueberries showing 496 kcal, and two fried eggs with avocado slices showing 277 kcal along with recovery and sleep percentages." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/h1dfdEJXQQG3.avif" alt="Woman in black athletic outfit taking a mirror selfie in a gym with overlay of Garmin data showing strain, recovery, sleep, and strength training metrics including duration, calories burned, heart rate, and weight lifted." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/CPDgGVpXpWvj.avif" alt="Black Canyon racing bicycle parked on grass near a palm tree by a waterfront under a clear sky." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/TWmIRevxkEHX.avif" alt="Running app screenshot showing a 16.03 km outdoor run in Indore, Madhya Pradesh with active duration 1h 52m, pace 7:03/km, 1243 kcal burned, elevation 45 m, heart rate 152 bpm, and power 183 watt." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/6YK07ucjlBWY.avif" alt="Man in a gym performing a push exercise using cable machine, with workout stats overlay showing 66% strain, 95% recovery, 99% sleep, 25g fat, 204g carbs, 171g protein, 1 hour 29 minutes duration, and 517 kcal energy burned." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/tDLr9pjDis2O.avif" alt="Screenshot of a testimonial praising the Bevel Health app for managing health conditions, showing daily metrics of strain, recovery, sleep, stress and energy, plus personalized health advice about luteal phase recovery and managing POTS symptoms." class="marquee_image">
+</div>
+<div class="marquee_col">
+<img loading="eager" src="assets/bevel/YoRhDP7Ucfsb.avif" alt="Indoor paddle tennis court with a player holding a paddle, a blue floor, net divides the court, and a sneaker visible in the foreground, overlaid with fitness tracking stats for strain, recovery, and sleep percentages." class="marquee_image">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+  <!-- S3 — CORE FEATURES (EVERYTHING YOUR CLIENTS NEED) -->
+  <section class="section-two" id="s2-features">
+    <div class="s2-container">
+      <div style="text-align:center; max-width:760px; margin:0 auto 36px;">
+        <h2 class="s2-title" style="margin-bottom:12px;">Everything Your Clients Need.<br>All in One Place.</h2>
+        <p style="font-size:1.1rem; color:#5a5a5a; font-weight:500;">Simple, powerful daily sheets designed for maximum client consistency.</p>
+      </div>
+      <div class="s2-grid">
+        <div class="s2-col s2-left">
+          <div class="feature-item">
+            <img src="assets/images/icon-workout.webp" alt="Workout Logs" class="feature-img">
+            <h3 class="feature-title">Workout Logs</h3>
+            <p class="feature-desc">Clear daily workout sheets to log sets, reps, and weights easily.</p>
+          </div>
+          <div class="feature-item">
+            <img src="assets/images/icon-nutrition.webp" alt="Meal Tracker" class="feature-img">
+            <h3 class="feature-title">Meal &amp; Macro Tracker</h3>
+            <p class="feature-desc">Simple food logs for tracking daily calories, protein, and water.</p>
+          </div>
+          <div class="feature-item">
+            <img src="assets/images/icon-goals.webp" alt="Goal Setting" class="feature-img">
+            <h3 class="feature-title">Goal Milestones</h3>
+            <p class="feature-desc">90-day targets broken down into simple, weekly action steps.</p>
+          </div>
+        </div>
+        <div class="s2-col s2-center">
+          <div class="planner-img-wrapper">
+            <img src="assets/images/book-mockup.webp" alt="Printable Coach Master Planner" class="planner-mockup-img">
+          </div>
+        </div>
+        <div class="s2-col s2-right">
+          <div class="feature-item">
+            <img src="assets/images/icon-progress.webp" alt="Progress Check-Ins" class="feature-img">
+            <h3 class="feature-title">Weekly Check-Ins</h3>
+            <p class="feature-desc">Fast 5-minute review sheets to keep clients accountable every week.</p>
+          </div>
+          <div class="feature-item">
+            <img src="assets/images/icon-mindset.webp" alt="Daily Habits" class="feature-img">
+            <h3 class="feature-title">Daily Habit Tracker</h3>
+            <p class="feature-desc">Checkboxes for sleep, steps, and hydration to build lasting routines.</p>
+          </div>
+          <div class="feature-item">
+            <img src="assets/images/icon-motivation.webp" alt="White-Label License" class="feature-img">
+            <h3 class="feature-title">Coach License</h3>
+            <p class="feature-desc">Print and share unlimited copies directly with all your clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile CTA Button (hidden on desktop) -->
+  <div class="s2-mobile-cta" style="display: none; padding: 16px 24px 8px; text-align: center; background: var(--white);">
+    <a href="#showcase-section" class="btn-primary" id="sec3-cta-btn" style="max-width: 300px; margin: 0 auto; justify-content: space-between;">
+      Start Your Transformation
+      <span class="arrow-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </span>
+    </a>
+  </div>
+
+<section class="section-2 bv-scope bv-notall" id="and-thats-not-all"><div class="w-layout-blockcontainer container-2 w-container"><div class="row u-vgap-16"><div class="col col-lg-1 u-md-hide"></div><div class="col col-lg-5 col-md-6 col-sm-12"><div class="u-vflex-left-top u-vgap-64-40"><div class="u-vflex-left-top u-vgap-16 u-align-center-sm"><h2 class="h2" style="font-family:'Barlow', var(--font-body), sans-serif; font-size:clamp(2.2rem, 3.8vw, 3.4rem); font-weight:800; line-height:1.15; letter-spacing:-0.03em; color:#1a1a1a; margin:0;">And that's not all</h2><p style="font-family:'Barlow', var(--font-body), sans-serif; font-size:1.1rem; line-height:1.5; color:#5a5a5a; font-weight:500; margin:0;">Everything you need to streamline client coaching, accountability, and results.</p></div><div data-lenis-prevent="" data-tabs-wrapper="" class="extra-features_list"><div data-tab="0" class="extra_features-item is-active"><div class="u-hflex-between-center u-hgap-12"><div class="u-vflex-left-top u-vgap-8"><h3 class="h4">Calorie Tracker</h3><p class="u-color-secondary">Daily nutrition journaling, detailed calorie intake counters, and hydration tracking.</p></div><div class="u-p-relative u-vflex-center-center u-flex-fixed"><div data-tabs-ring="" class="tabs-control"><div class="u-w-100 u-h-100 w-embed"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#C2C6CE" stroke-width="6"></circle><circle data-tabs-ring="" cx="60" cy="60" r="54" fill="none" stroke="#de2b70" stroke-width="6"></circle></svg></div><div class="tabs_play-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12H18M18 12L13 7M18 12L13 17"></path></svg></div></div></div></div></div><div data-tab="1" class="extra_features-item"><div class="u-hflex-between-center u-hgap-12"><div class="u-vflex-left-top u-vgap-8"><h3 class="h4">Habit & Steps Progress</h3><p class="u-color-secondary">Monthly fitness habit tracker, 12K daily steps progression, and 30-day challenge grid.</p></div><div class="u-p-relative u-vflex-center-center u-flex-fixed"><div data-tabs-ring="" class="tabs-control"><div class="u-w-100 u-h-100 w-embed"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#C2C6CE" stroke-width="6"></circle><circle data-tabs-ring="" cx="60" cy="60" r="54" fill="none" stroke="#de2b70" stroke-width="6"></circle></svg></div><div class="tabs_play-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12H18M18 12L13 7M18 12L13 17"></path></svg></div></div></div></div></div><div data-tab="2" class="extra_features-item"><div class="u-hflex-between-center u-hgap-12"><div class="u-vflex-left-top u-vgap-8"><h3 class="h4">Fast Weekly Check-Ins</h3><p class="u-color-secondary">Structured weekly workout logs, cardio splits, and 4-week fitness tracking sheets.</p></div><div class="u-p-relative u-vflex-center-center u-flex-fixed"><div data-tabs-ring="" class="tabs-control"><div class="u-w-100 u-h-100 w-embed"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#C2C6CE" stroke-width="6"></circle><circle data-tabs-ring="" cx="60" cy="60" r="54" fill="none" stroke="#de2b70" stroke-width="6"></circle></svg></div><div class="tabs_play-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12H18M18 12L13 7M18 12L13 17"></path></svg></div></div></div></div></div><div data-tab="3" class="extra_features-item"><div class="u-hflex-between-center u-hgap-12"><div class="u-vflex-left-top u-vgap-8"><h3 class="h4">Daily Workout Builder</h3><p class="u-color-secondary">Targeted daily workout logs with sets, reps, weights, warmup & cooldown routines.</p></div><div class="u-p-relative u-vflex-center-center u-flex-fixed"><div data-tabs-ring="" class="tabs-control"><div class="u-w-100 u-h-100 w-embed"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#C2C6CE" stroke-width="6"></circle><circle data-tabs-ring="" cx="60" cy="60" r="54" fill="none" stroke="#de2b70" stroke-width="6"></circle></svg></div><div class="tabs_play-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12H18M18 12L13 7M18 12L13 17"></path></svg></div></div></div></div></div><div data-tab="4" class="extra_features-item"><div class="u-hflex-between-center u-hgap-12"><div class="u-vflex-left-top u-vgap-8"><h3 class="h4">Health & Medical Logs</h3><p class="u-color-secondary">Complete client health profiles, appointment records, vitals, and vitamin schedules.</p></div><div class="u-p-relative u-vflex-center-center u-flex-fixed"><div data-tabs-ring="" class="tabs-control"><div class="u-w-100 u-h-100 w-embed"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#C2C6CE" stroke-width="6"></circle><circle data-tabs-ring="" cx="60" cy="60" r="54" fill="none" stroke="#de2b70" stroke-width="6"></circle></svg></div><div class="tabs_play-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12H18M18 12L13 7M18 12L13 17"></path></svg></div></div></div></div></div></div></div></div><div class="col col-lg-6 col-md-6 col-sm-12"><div class="u-vflex-center-center u-h-100"><div class="u-vflex-center-center u-p-relative bevel-mockup-container"><div data-tab-panel="0" class="mockup-tab-panel is-active"><div class="mockup-cards-stack"><div class="mockup-card cc-left"><img loading="eager" src="assets/images/mockups/tab-2-card-0.webp" alt="Calorie Tracker Screenshot 1"></div><div class="mockup-card cc-center"><img loading="eager" src="assets/images/mockups/tab-2-card-1.webp" alt="Calorie Tracker Screenshot 2"></div><div class="mockup-card cc-right"><img loading="eager" src="assets/images/mockups/tab-2-card-2.webp" alt="Calorie Tracker Screenshot 3"></div></div></div><div data-tab-panel="1" class="mockup-tab-panel"><div class="mockup-cards-stack"><div class="mockup-card cc-left"><img loading="eager" src="assets/images/mockups/tab-3-card-0.webp" alt="Habit & Steps Progress Screenshot 1"></div><div class="mockup-card cc-center"><img loading="eager" src="assets/images/mockups/tab-3-card-1.webp" alt="Habit & Steps Progress Screenshot 2"></div><div class="mockup-card cc-right"><img loading="eager" src="assets/images/mockups/tab-3-card-2.webp" alt="Habit & Steps Progress Screenshot 3"></div></div></div><div data-tab-panel="2" class="mockup-tab-panel"><div class="mockup-cards-stack"><div class="mockup-card cc-left"><img loading="eager" src="assets/images/mockups/tab-1-card-0.webp" alt="Fast Weekly Check-Ins Screenshot 1"></div><div class="mockup-card cc-center"><img loading="eager" src="assets/images/mockups/tab-1-card-1.webp" alt="Fast Weekly Check-Ins Screenshot 2"></div><div class="mockup-card cc-right"><img loading="eager" src="assets/images/mockups/tab-1-card-2.webp" alt="Fast Weekly Check-Ins Screenshot 3"></div></div></div><div data-tab-panel="3" class="mockup-tab-panel"><div class="mockup-cards-stack"><div class="mockup-card cc-left"><img loading="eager" src="assets/images/mockups/tab-0-card-0.webp" alt="Daily Workout Builder Screenshot 1"></div><div class="mockup-card cc-center"><img loading="eager" src="assets/images/mockups/tab-0-card-1.webp" alt="Daily Workout Builder Screenshot 2"></div><div class="mockup-card cc-right"><img loading="eager" src="assets/images/mockups/tab-0-card-2.webp" alt="Daily Workout Builder Screenshot 3"></div></div></div><div data-tab-panel="4" class="mockup-tab-panel"><div class="mockup-cards-stack"><div class="mockup-card cc-left"><img loading="eager" src="assets/images/mockups/tab-4-card-0.webp" alt="Health & Medical Logs Screenshot 1"></div><div class="mockup-card cc-center"><img loading="eager" src="assets/images/mockups/tab-4-card-1.webp" alt="Health & Medical Logs Screenshot 2"></div><div class="mockup-card cc-right"><img loading="eager" src="assets/images/mockups/tab-4-card-2.webp" alt="Health & Medical Logs Screenshot 3"></div></div></div></div></div></div></div>
+        <div style="margin-top: 48px; text-align: center; width: 100%;">
+          <a href="#showcase-section" class="btn-primary" id="sec4-return-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 12px; margin: 0 auto; padding: 16px 32px; font-size: 1.05rem; max-width: 360px; text-decoration: none !important;">
+            <span>Transform Your Clients</span>
+            <span class="arrow-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div></section>
+
+  <!-- S3 — COMMUNITY / TESTIMONIAL (restored exactly) -->
+  <section class="section-community" id="s3">
+    <div class="community-inner">
+
+      <div class="product-showcase-container" id="showcase-section" style="margin-bottom: 28px; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); background: #ffffff; padding: 44px 0 36px;">
+        
+        <div style="max-width: 900px; margin: 0 auto 28px; padding: 0 24px;">
+          <h2 class="transform-heading" style="font-size: clamp(2rem, 3.6vw, 3.4rem); font-weight: 800; color: #1a1a1a; text-align: center; line-height: 1.15; letter-spacing: -0.03em; margin: 0;">Transform Your Clients in 90 Days<br>with a Structured Physical Planner</h2>
+        </div>
+        
+        <div class="showcase-grid" style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; padding: 0 40px;">
+          
+          <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
+            <div style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+              <button id="showcase-prev" style="position: absolute; left: -22px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid #e4e4e8; background: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.25s var(--ease); color: #1a1a1a; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" aria-label="Previous image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+
+              <div class="showcase-slider-wrapper" style="position: relative; width: 100%; border-radius: 12px; overflow: hidden; aspect-ratio: 16 / 9; border: 2px solid #e4e4e8; background: #fafafa; flex-grow: 1; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <div class="showcase-slides" id="showcase-slides" style="display: flex; width: 600%; height: 100%; transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer;">
+                  <div class="showcase-slide" style="width: 16.666%; height: 100%;" onclick="openShowcaseLightbox(0)"><img src="assets/images/slide-0.webp" alt="Transformation View 1" style="width: 100%; height: 100%; object-fit: cover;" decoding="async"></div>
+                  <div class="showcase-slide" style="width: 16.666%; height: 100%;" onclick="openShowcaseLightbox(1)"><img src="assets/images/slide-1.webp" alt="Transformation View 2" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async"></div>
+                  <div class="showcase-slide" style="width: 16.666%; height: 100%;" onclick="openShowcaseLightbox(2)"><img src="assets/images/slide-2.webp" alt="Transformation View 3" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async"></div>
+                  <div class="showcase-slide" style="width: 16.666%; height: 100%;" onclick="openShowcaseLightbox(3)"><img src="assets/images/slide-3.webp" alt="Transformation View 4" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async"></div>
+                  <div class="showcase-slide" style="width: 16.666%; height: 100%;" onclick="openShowcaseLightbox(4)"><img src="assets/images/slide-4.webp" alt="Transformation View 5" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async"></div>
+                  <div class="showcase-slide" style="width: 16.666%; height: 100%;" onclick="openShowcaseLightbox(5)"><img src="assets/images/slide-5.webp" alt="Transformation View 6" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async"></div>
+                </div>
+                
+                <div style="position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 2;">
+                  <span class="showcase-indicator active" style="width: 8px; height: 8px; border-radius: 50%; background: #de2b70; cursor: pointer; transition: all 0.25s;"></span>
+                  <span class="showcase-indicator" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.1); cursor: pointer; transition: all 0.25s;"></span>
+                  <span class="showcase-indicator" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.1); cursor: pointer; transition: all 0.25s;"></span>
+                  <span class="showcase-indicator" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.1); cursor: pointer; transition: all 0.25s;"></span>
+                  <span class="showcase-indicator" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.1); cursor: pointer; transition: all 0.25s;"></span>
+                  <span class="showcase-indicator" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.1); cursor: pointer; transition: all 0.25s;"></span>
+                </div>
+              </div>
+
+              <button id="showcase-next" style="position: absolute; right: -22px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid #e4e4e8; background: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.25s var(--ease); color: #1a1a1a; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" aria-label="Next image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <span style="background: #fde3f0; color: #de2b70; font-size: 0.7rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block;">Best Seller</span>
+              <span style="font-size: 0.85rem; color: #555555; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                <span style="color: #ffb100;">★★★★★</span> (1,200+ Reviews)
+              </span>
+            </div>
+            <h3 style="font-family: 'Inter', 'Barlow', sans-serif; font-size: 36px; font-weight: 800; color: #111111; margin-bottom: 18px; line-height: 1.2; letter-spacing: -0.5px;">The 90-Day Fitness Planner System</h3>
+            
+            <p style="font-size: 15px; color: #555555; line-height: 1.6; margin-bottom: 16px;">
+              Most fitness clients quit when tracking workouts feels complicated. <strong>The 90-Day Fitness Planner</strong> gives clients a physical, 12-week tracking system they print out and write in by hand.
+            </p>
+            <p style="font-size: 15px; color: #555555; line-height: 1.6; margin-bottom: 0;">
+              No apps to download and no screen fatigue. Just clear daily pages that keep clients accountable to their training, meals, and weekly habits.
+            </p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+            <div style="margin-bottom: 24px;">
+              <span style="color: #de2b70; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 4px;">Inside The System</span>
+              <h3 style="font-family: 'Inter', 'Barlow', sans-serif; font-size: 26px; font-weight: 900; color: #111111; margin: 0; line-height: 1.2;">Inside The Coach System:</h3>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 30px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <h4 style="font-size: 15px; font-weight: 700; color: #111111; margin-bottom: 2px; line-height: 1.3;">90-Day Printable Client Log</h4>
+                  <p style="font-size: 13px; color: #666666; line-height: 1.4; margin: 0;">Ready-to-print PDF pages that clients keep on their desk or in their gym bag.</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <h4 style="font-size: 15px; font-weight: 700; color: #111111; margin-bottom: 2px; line-height: 1.3;">Workout Logs &amp; Meal Prep Trackers</h4>
+                  <p style="font-size: 13px; color: #666666; line-height: 1.4; margin: 0;">Straightforward tables to record sets, reps, daily calories, and hydration.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <h4 style="font-size: 15px; font-weight: 700; color: #111111; margin-bottom: 2px; line-height: 1.3;">Daily Habit Checklists</h4>
+                  <p style="font-size: 13px; color: #666666; line-height: 1.4; margin: 0;">Simple checkboxes for sleep, daily steps, and recovery habits.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <h4 style="font-size: 15px; font-weight: 700; color: #111111; margin-bottom: 2px; line-height: 1.3;">Weekly Check-In Sheets</h4>
+                  <p style="font-size: 13px; color: #666666; line-height: 1.4; margin: 0;">One-page weekly reviews so you can see client progress in seconds.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <h4 style="font-size: 15px; font-weight: 700; color: #111111; margin-bottom: 2px; line-height: 1.3;">Print &amp; Commercial Distribution Rights</h4>
+                  <p style="font-size: 13px; color: #666666; line-height: 1.4; margin: 0;">Add your logo, print copies, and hand them directly to your coaching clients.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;">
+              <span style="font-size: 38px; font-weight: 800; color: #de2b70; line-height: 1;">$97.00</span>
+              <span style="font-size: 18px; color: #9CA3AF; text-decoration: line-through;">$194.00</span>
+              <span style="background: #fde3f0; color: #de2b70; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 6px;">50% LAUNCH DISCOUNT</span>
+            </div>
+            
+            <a href="https://checkout.dodopayments.com/buy/pdt_0Nrl6ma9oHEXd41P1f4FR?quantity=1" id="showcase-buy-btn" style="display: flex; justify-content: space-between; align-items: center; padding: 18px 28px; background: #de2b70; color: #ffffff; border-radius: 9999px; text-decoration: none; font-size: 16px; font-weight: 700; width: 100%; max-width: 420px; transition: all 0.25s var(--ease); box-shadow: 0 8px 24px rgba(222,43,112,0.22);">
+              <span>Get the Coach System now</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+
+            <div class="bb-pay">
+              <span class="pc visa" title="Visa">VISA</span>
+              <span class="pc mc" title="Mastercard"><i></i><i></i></span>
+              <span class="pc amex" title="American Express">AMEX</span>
+              <span class="pc disc" title="Discover">DISCOVER</span>
+              <span class="pc apay" title="Apple Pay"><svg viewBox="0 0 14 17" width="9" height="11"><path fill="#fff" d="M11.6 9c0-2 1.6-3 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.6-.7-2.6-.7C3.4 4.4 2.1 5.2 1.4 6.4c-1.4 2.5-.4 6.1 1 8.1.7 1 1.5 2 2.5 2s1.4-.6 2.6-.6 1.5.6 2.6.6 1.7-1 2.4-2c.8-1.1 1.1-2.2 1.1-2.3 0 0-2-.8-2-3.2zM9.7 3.1c.5-.7.9-1.6.8-2.6-.8 0-1.8.5-2.3 1.2-.5.6-1 1.6-.8 2.5.9.1 1.8-.4 2.3-1.1z"></path></svg>Pay</span>
+              <span class="pc gpay" title="Google Pay"><b style="color:#4285F4">G</b>Pay</span>
+              <span class="pc spay" title="Shop Pay">shop<em>Pay</em></span>
+            </div>
+            <p class="bb-sec">🔒 Secure checkout by Dodo Payments</p>
+
+            <p style="font-size: 13px; color: #666; margin-top: 10px;">Instant download. Print-ready PDF files for physical use.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6 & 7: PLAN COMPARISON (WHAT'S THE DIFFERENCE?) & FOUNDING CLOCK (Imported from Chaptee) -->
+      <div class="cmp-clock-stage">
+        <section class="cmp" id="compare">
+          <h2 class="disp cmp-h">What's the <span class="kw">difference?</span></h2>
+          <div class="cmp-box">
+            <table class="cmp-t">
+              <thead>
+                <tr>
+                  <th scope="col"><span class="sr">Feature</span></th>
+                  <th scope="col">Fitness Apps</th>
+                  <th scope="col" class="hi">Fitness Planner</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Clients actually open and fill it out daily</th><td><span class="no">✕</span></td><td class="hi"><span class="ok">✓</span></td></tr>
+                <tr><th scope="row">Pen and paper (No screen distractions in the gym)</th><td><span class="no">✕</span></td><td class="hi"><span class="ok">✓</span></td></tr>
+                <tr><th scope="row">Easy weekly check-ins in under 2 minutes</th><td><span class="no">–</span></td><td class="hi"><span class="ok">✓</span></td></tr>
+                <tr><th scope="row">Stays in sight on their desk or fridge</th><td><span class="no">✕</span></td><td class="hi"><span class="ok">✓</span></td></tr>
+                <tr><th scope="row">Print as many copies as you need for clients</th><td><span class="no">✕</span></td><td class="hi"><span class="ok">✓</span></td></tr>
+                <tr><th scope="row">No monthly app fees for you or your clients</th><td><span class="no">✕</span></td><td class="hi"><span class="ok">✓</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="founder-clock-section">
+          <div class="fclock-head">
+            <h2 class="disp" id="priceHead">Limited Founding Seats <span class="kw">Available Now.</span></h2>
+            <div class="fclock" id="founderMeter" role="timer" aria-live="off">
+              <p class="fc-lab"><i class="led" aria-hidden="true"></i>Special launch pricing ends in</p>
+              <div class="fc-row">
+                <div class="fc"><b id="fcD">04</b><i>days</i></div><span class="fc-sep" aria-hidden="true">:</span>
+                <div class="fc"><b id="fcH">21</b><i>hours</i></div><span class="fc-sep" aria-hidden="true">:</span>
+                <div class="fc"><b id="fcM">38</b><i>mins</i></div><span class="fc-sep" aria-hidden="true">:</span>
+                <div class="fc"><b id="fcS">48</b><i>secs</i></div>
+              </div>
+              <p class="fc-note">One-time payment for lifetime access & updates. No subscriptions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Main Heading with Images -->
+      <div class="community-heading">
+        <h2>We make it easy for fitness coaches to plan client workouts, track their progress, and scale their business.</h2>
+      </div>
+      <div class="stagger-testimonials-wrap" id="testimonials-container"></div>
+
+      <div class="testimonials-nav">
+        <button id="btn-prev-test" aria-label="Previous testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button id="btn-next-test" aria-label="Next testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- S4 — THE METHOD -->
+  <section class="section-method" id="s4">
+    <div class="method-container">
+      <div class="left-col">
+        <div class="label-row">
+          <span class="label-dot"></span>
+          <span class="label-text">FAQ &amp; Overview</span>
+        </div>
+        <h2 class="method-heading" style="font-size: clamp(2rem, 3.2vw, 2.9rem);">
+          Level up your<br>perfect coaching system.
+        </h2>
+        <div class="feature-buttons">
+          <button class="feature-btn">
+            <img src="assets/images/icon-nutrition.webp" alt="Meal Prep" width="24" height="24"> Meal Prep
+          </button>
+          <button class="feature-btn">
+            <img src="assets/images/icon-progress.webp" alt="Workout Log" width="24" height="24"> Workout Log
+          </button>
+        </div>
+        <div class="accordion">
+          <div class="accordion-card">
+            <div class="accordion-header">
+              <span class="accordion-title">Why do clients stick to paper better than fitness apps?</span>
+              <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#de2b70" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+            </div>
+            <div class="accordion-body">Apps bring phone notifications and extra screen time. When clients keep a printed sheet on their desk or in their gym bag, it acts as a constant physical reminder. Writing by hand takes less than two minutes a day and eliminates app fatigue.</div>
+          </div>
+          <div class="accordion-card">
+            <div class="accordion-header">
+              <span class="accordion-title">Can I add my coaching logo and brand colors?</span>
+              <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line><line x1="12" y1="5" x2="12" y2="19"></line></svg></span>
+            </div>
+            <div class="accordion-body hidden">Yes. You get full commercial white-label rights. You can add your logo, coaching business name, and contact details before printing copies for any of your active clients.</div>
+          </div>
+          <div class="accordion-card">
+            <div class="accordion-header">
+              <span class="accordion-title">How do I use this with remote online coaching clients?</span>
+              <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line><line x1="12" y1="5" x2="12" y2="19"></line></svg></span>
+            </div>
+            <div class="accordion-body hidden">Send clients the PDF files during onboarding to print at home, or mail them a printed spiral binder as a welcome kit. During weekly check-ins, clients simply send a photo of their completed log sheet so you can review their progress in seconds.</div>
+          </div>
+          <div class="accordion-card">
+            <div class="accordion-header">
+              <span class="accordion-title">What sheets and pages are included in the download?</span>
+              <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line><line x1="12" y1="5" x2="12" y2="19"></line></svg></span>
+            </div>
+            <div class="accordion-body hidden">You receive the full 90-day daily workout log sheets, nutrition and calorie tracking tables, daily habit checklists (sleep, water, steps), weekly check-in review sheets, and client setup guides. All files come print-ready in standard US Letter and A4 sizes.</div>
+          </div>
+          <div class="accordion-card">
+            <div class="accordion-header">
+              <span class="accordion-title">Are there any monthly subscription fees or client limits?</span>
+              <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line><line x1="12" y1="5" x2="12" y2="19"></line></svg></span>
+            </div>
+            <div class="accordion-body hidden">No recurring fees and no client limits. It is a one-time purchase of $97 with lifetime access. You can print as many copies as you need for all your current and future coaching clients without paying extra fees.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="right-col-info">
+          <div>
+            <div class="est-row">
+              <img class="est-star" src="assets/images/icon-goals.webp" alt="star" width="24" height="24">
+              <span class="est-label">SCALE YOUR COACHING</span>
+            </div>
+            <p class="right-desc">Ready to deliver high-ticket results without the admin headaches? Join 2,500+ trainers today.</p>
+          </div>
+          <div class="right-cta-block">
+            <h3 class="right-heading">Scale Your Coaching,<br>Achieve Here.</h3>
+            <button class="cta-btn" id="faq-cta-btn">
+              <span>Get Started Now</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+        <div class="right-col-photo">
+          <img src="assets/images/glowup-mockup-34.webp" alt="90 Glow Up System Book Mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Apple-Style Floating Promo Buy Bar -->
+  <aside class="apple-floating-bar" id="floating-buy-bar" aria-label="Quick purchase bar">
+    <div class="apple-floating-left">
+      <img src="assets/images/glowup-mockup-34.webp" alt="Coach System Planner" class="apple-floating-thumb" loading="lazy">
+      <div class="apple-floating-info">
+        <span class="apple-floating-title">90-Day Coach System</span>
+        <div class="apple-floating-price-wrap">
+          <span class="apple-floating-price">$97.00</span>
+          <span class="apple-floating-orig">$194</span>
+          <span class="apple-floating-badge">50% OFF</span>
+        </div>
+      </div>
+    </div>
+    <a href="https://checkout.dodopayments.com/buy/pdt_0Nrl6ma9oHEXd41P1f4FR?quantity=1" target="_blank" rel="noopener noreferrer" class="apple-floating-btn" id="floating-buy-btn">
+      <span>Get System</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </aside>
+
+  <script type="module" src="js/main.js?v=reveal1"></script>
+</body></html>
